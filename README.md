@@ -4,8 +4,8 @@
     <li>Udskriver følgende på terminalen:</li>
         <ol>
             <li>Mappenavn, som overskrift</li>
-            <li>Filnavne på alle de filer der findes i pågældende mappen</li>
-            <li>Datostempel for seneste ændring.</li>
+            <li>Filnavne på alle de filer, der findes i pågældende mappe</li>
+            <li>Datostempel for seneste ændring af filen.</li>
         </ol>
-    <li>De mapper der er relevante for udskrift er defineret i py-filen constants.py</li>
+    <li>De mapper, der er relevante for fil-udskrift er defineret i py-filen <b>constants.py</b></li>
 </ol>
