@@ -14,7 +14,7 @@ def print_folder_list(project):
         for file in file_list:
             if isfile(join(file_path, file)):
                 modified_time = getmtime(join(file_path, file))
-                print(file + " : " + datetime.datetime.fromtimestamp(modified_time).strftime('%d-%m-%Y %H:%M:%S'))
+                print("\t" + file + " : " + datetime.datetime.fromtimestamp(modified_time).strftime('%d-%m-%Y %H:%M:%S'))
 
     return
 
