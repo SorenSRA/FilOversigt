@@ -8,7 +8,7 @@ import fildates.constants as c
 
 def print_folder_list(project):
     for folder in project.distspec.values():
-        file_path = join(project.pathroot, project.pathspec, folder)
+        file_path = join(project.pathroot, project.pathbase, folder, project.pathspec)
         file_list = (listdir(file_path))
         print(file_path)
         for file in file_list:

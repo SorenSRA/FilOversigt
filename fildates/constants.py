@@ -3,63 +3,64 @@ from dataclasses import dataclass, field
 
 @dataclass
 class BasisOpl:
-    pathroot: str = r'C:\Billeder'
+    pathroot: str = r"C:\Filkassen"
 
 
 @dataclass
 class NatureMan(BasisOpl):
-    pathspec: str = 'Billeder2021'
+    pathbase: str = r"LIFE-NatureMan Financial Reporting"
+    pathspec: str = r"Fase 3 2022og2023\1. Financial Report"
     distspec: dict = field(default_factory=lambda: {
-        "A": "20210318HestehaveSkov",
-        "B": "20210326MolsBjerge",
-        "C": "20210331RingelmoseSkov",
-        "D": "20210410RugaardNordstrand",
-        "E": "20210413Rugaard",
-        "F": "20210419MolsBjerge",
-        "G": "20210420MolsBjerge",
-        "H": "20210424RingelmoseSkov",
+        "Jam": "1. Jammerbugt Kommune",
+        "Mar": "2. Mariagerfjord Kommune",
+        "Ran": "3. Randers Kommune",
+        "Reb": "4. Rebild Kommune",
+        "Ski": "5. Skive Kommune",
+        "Vhi": "6. VestHimmerland Kommune",
+        "Vib": "7. Viborg Kommune",
+        "Aal": "8. Aalborg Kommune",
+        "NST": "91. Naturstyrelsen",
+        "LBST": "92. Landbrugsstyrelsen",
+        "MST": "93. Miljostyrelsen",
     })
 
 
 @dataclass
 class Openwood(BasisOpl):
-    pathspec: str = 'Billeder2021'
+    pathbase: str = r"LIFE-OpenWoods  Financial Reporting"
+    pathspec: str = r"1. Financial Report"
     distspec: dict = field(default_factory=lambda: {
-        "I": "20210518Krakaer",
-        "J": "20210522RingelmoseSkov",
-        "K": "20210527MolsBjerge",
-        "L": "20210528RugaardNordstrand",
-        "M": "20210530ElsegaardeSyd",
-        "N": "20210531StaksrodeSkov",
-        "O": "20210604Havagervej",
-        "P": "20210604MaardalsHus",
-        "Q": "20210605LilleVildmose",
+        "AMPHI": "1. Amphi",
+        "AVJF": "2. AageVJensen",
+        "DEP": "3. MST",
+        "FLC": "4. SkovSkolen",
+        "SN": "5. StiftungNatur",
+        "DNA": "6. NST",
     })
 
 
 
 @dataclass
 class ForFit(BasisOpl):
-    pathspec: str = 'Billeder2021'
+    pathbase: str = r"LIFE-ForFit Financial Reporting"
+    pathspec: str = r"1. Financial Report"
     distspec: dict = field(default_factory=lambda: {
-        "R": "20210605MaardalsHus",
-        "S": "20210609GlatvedStrand",
-        "T": "20210609RugaardNordstrand",
-        "U": "20210627TvedKaer",
-        "V": "20210630TornbyKlitpltg",
-        "X": "20210707RugaardNordstrand",
-        "Y": "20210711BredFjed",
-        "Z": "20210711SoeholtStorskov",
-        "AA": "20210712Hyllekrog",
-        "AB": "20210712SoeholtStorskov",
-        "AC": "20210713Hovblege",
-        "AD": "20210713MoensKlint",
-        "AE": "20210714Krenkerup",
-        "AF": "20210715Bjergemark",
-        "AG": "20210715Skovtaarnet",
-        "AH": "20210716Dodekalitten",
-        "AI": "20210716TaarsHavn",
-        "AJ": "20210723MolsBjerge",
-        "AK": "20210919MolsBjerge",
-        "AL": "2021Uge42Sivota",
+        "DSK": "1. Dansk Skovforening",
+        "EPA": "2. Miljøstyrelsen",
+        "HD": "3. HedeSelskabet\\1. HD",
+        "HJØ": "3. HedeSelskabet\\2. StoreHjollund",
+        "HØL": "3. HedeSelskabet\\3. HollundSogaard",
+        "GRI": "3. HedeSelskabet\\4. GrindstedPlantage",
+        "BRØ": "3. HedeSelskabet\\5. BronsSkov",
+        "FÆR": "3. HedeSelskabet\\6. FaerchsPlantage",
+        "SON": "3. HedeSelskabet\\7. SondrupPlantage",
+        "CLA": "3. HedeSelskabet\\9. Clasonborg",
+        "IGN": "4. Københavns Universitet",
+        "SLS": "5. Salten Langsø",
+        "SHLF": "6. Landesforsten Schleswig-Holstein",
+        "SKD": "7. Skovdyrkerne",
+        "LOV": "8. Løvenholm - NST",
+        "SOR": "9. Sorø - NST",
+        "STI": "10. Stilde - NST",
+        "NST": "20. Naturstyrelsen",
     })
