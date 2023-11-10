@@ -14,24 +14,23 @@ def print_folder_list(project):
         for file in file_list:
             if isfile(join(file_path, file)):
                 modified_time = getmtime(join(file_path, file))
-                print("\t" + file + " : " + datetime.datetime.fromtimestamp(modified_time).strftime('%d-%m-%Y %H:%M:%S'))
+                print("****\t" + file + " : " + datetime.datetime.fromtimestamp(modified_time).strftime('%d-%m-%Y %H:%M:%S'))
 
     return
 
 
 
 def create_file_list(pr):
-    match pr:
-        case "Nat":
+    match pr.lower():
+        case "nat":
             project = c.NatureMan()
-        case "Open":
+        case "open":
             project = c.Openwood()
-        case "For":
+        case "for":
             project = c.ForFit()
         case _:
-            project = None
+            print("Forkert angivelse af projekt: Gyldige arg.: Nat - Open - For")
+            return
 
-    if project:
-        print_folder_list(project)
-    else:
-        print("Forkert angivelse af projekt: Gyldige arg.: Nat - Open - For")
+
+    print_folder_list(project)
