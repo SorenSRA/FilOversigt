@@ -2,9 +2,10 @@ from os.path import join, getmtime, isfile
 from os import listdir
 import datetime
 
+import sys
+sys.path.append(r'C:\Filkassen\PythonMm\VSCode_projects\LIFEOpsaetning')
 
-import fildates.constants as c
-
+import partneroversigt as po
 
 def print_folder_list(project):
     for folder in project.distspec.values():
@@ -23,11 +24,11 @@ def print_folder_list(project):
 def create_file_list(pr):
     match pr.lower():
         case "nat":
-            project = c.NatureMan()
+            project = po.Natureman()
         case "open":
-            project = c.Openwood()
+            project = po.Openwood()
         case "for":
-            project = c.ForFit()
+            project = po.Forfit()
         case _:
             print("Forkert angivelse af projekt: Gyldige arg.: Nat - Open - For")
             return
